@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Harshitha Technologies</title>
+  <style>
+    h1 {
+      font-size: 40px;
+      font-family: Roboto;
+      font-weight: normal;
+      color: rgb(100,100,100);
+      text-align: center;
+    }
+    #banner {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+    h2 {
+      font-family: Roboto;
+      font-size: 32px;
+      color: rgb(100,100,100);
+      text-align: center;
+      font-weight: normal;
+    }
+    #container {
+      max-width: 720px;
+      margin: 0 auto 0 auto;
+    }
+    .body {
+      font-family: Roboto;
+      color: rgb(80,80,80);
+    }
+    /* Custom CSS for navbar */
+    .navbar {
+      background-color: #343a40 !important; /* Dark background */
+      width: 100%; /* Spread over the whole width */
+    }
+
+    .navbar .navbar-brand {
+      color: #ffffff; 
+    }
+
+    .navbar .navbar-nav .nav-link {
+      color: #ffffff !important; /* White text color for links */
+    }
+
+    .navbar .navbar-nav .nav-link:hover {
+      color: #ffffff !important; /* White text color on hover */
+    }
+
+    /* Add more custom styling if needed */
+
+    .navbar .navbar-nav .nav-link {
+      color: #6c757d; /* Gray text color */
+    }
+    .navbar .navbar-nav .nav-link:hover {
+      color: #007bff; /* Blue text color on hover */
+    }
+    footer {
+        text-align: center;
+        font-family: Roboto;
+        color: white; /* Change text color to white */
+        background-color: rgb(50, 50, 50); /* Change background color to dark */
+    }
+
+    footer button {
+      text-align: center;
+      font-family: Roboto;
+      color: white; /* Change text color to white */
+      background-color: rgb(50, 50, 50); /* Change background color to dark */
+        
+    }
+    footer p {
+        text-align: center;
+        font-family: Roboto;
+        color: white; /* Change text color to white */
+        background-color: rgb(50, 50, 50); /* Change background color to dark */
+    }
+
+
+  </style>
+</head>
+<body class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">{{ company_name }}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a href="admin.html">
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#contact">Contact Us</a></li>
+              <li><a class="dropdown-item" href="#about">About Us</a></li>
+              <li><a class="dropdown-item" href="#products">Products</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="container">
+    <h1 class="text-center mt-2 mb-4">
+      {{ company_name }} 
+    </h1>
+    <img class="fluid" id="banner" src="static\download.jpeg" >
+    <br>
+    <br>
+    <p class="lead"> 
+      An IT solution Provider offering IT Solutions sales and services across verticals.<br>
+      An organization synonymous with the best practices in IT Solutions, sales and services of a complete range of IT
+      products.<br>
+      We are driven by strong work ethics, passion for technology, and an eternal Quest for improving our knowledge base. We
+      are catering to the software and hardware requirements of all the segments of the industry by providing more value to
+      the services we provide. We offer the entire range of software products starting from desktop products, application
+      software, and web-based development tools, security and backup solutions too.<br>
+      The services we offer range from pre-sales consulting, domain-specific consulting, deployment, systems integration,
+      custom software development, Managed Services, Network design / Management.<br>
+      To service our customers better, we have aligned with some of the global leaders in the IT industry including
+      Microsoft, Kaspersky, Symantec, Mcafee, Adobe, Oracle, Dell, Lenovo, IBM, HP, AMD, Acer, Fujitsu, etc. <br>
+      In short, we are fulfilling all the IT requirements for various industries and business houses with cost-effective and
+      excellent service attached to it. Our strategic tie-up with the leading vendors of the IT industry enables us to
+      provide customers a wide range of computing products at the right price each time to match the expectations and
+      standards. <br>
+      Our Endeavour is not only the sale of products to our valued clients but also to render after-sales services as and
+      when required.<br>
+      Please feel free to contact us to know more about our company.<br>
+      Our Vision<br>
+      The management team of Harshitha Technologies, presents their vision and mission through the following statements.<br>
+      To constantly strive to meet or exceed our customer needs and expectations of price, service, choice and selection.
+      To achieve this, we will constantly evaluate and innovate our products and services offerings and provide market
+      intelligence necessary for their continued growth<br>
+      To be a profitable provider of high-quality software solutions and services that provide strategic value to our
+      customers<br>
+      To be known as an IT consulting Company providing state-of-art technology solutions backed with excellent after-sales
+      support.
+      <br>
+      <br>
+      <br>
+    </p>
+    <h2 class="text-center mt-2 mb-4">Services Offered</h2>
+    <p>
+      {% for service in services %}
+      {% include 'service.html' %}
+      {% endfor %}
+    </p>
+    <br>
+    <br>
+    <br>
+    <footer class="mt-4 text-center">
+ <center> 
+  <a href="/contact" class="btn btn-primary btn-lg">Contact Us</a>
+
+
+  </div>
+  <div class="text-center mt-4">
+    
+    <a href="www.instagram.com"><img src="static/insta.jpg" alt="Instagram" style="width: 32px; height: 32px;"></a>
+    
+    <a href="www.twitter.com"><img src="static/x.png" alt="Twitter" style="width: 32px; height: 32px;"></a>
+  </div>
+   <br>
+   <br>
+   
+
+  
+   <center> <p>Copyrights @2011</p></center></center>
+  </footer>
+  </body>
+  </html>
